@@ -1,0 +1,11 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-rt = "2.10.0"
+awc = "3.5.1"
+models = { path = "../models/" }
+procfs = "0.17.0"
+futures = "0.3"

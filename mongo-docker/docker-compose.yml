@@ -1,0 +1,18 @@
+# Use root/example as user/password credentials
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    env_file: "mongo.env"
+    ports:
+      - 27017:27017
+    volumes:
+      - "./config:/docker-entrypoint-initdb.d"
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    env_file: "mongo-express.env"
+    ports:
+      - 8081:8081
